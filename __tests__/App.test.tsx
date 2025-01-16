@@ -1,8 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 import App from '../App';
+import {render} from '@testing-library/react-native';
 
-test('renders correctly', () => {
-  const { getByText } = render(<App />);
-  expect(getByText('Home Screen')).toBeTruthy();
+describe('test App component', () => {
+  it('should find text', () => {
+    const {getByText} = render(<App />);
+    expect(getByText('Hello BNP Paris Bas :)')).toBeTruthy();
+  });
 });
